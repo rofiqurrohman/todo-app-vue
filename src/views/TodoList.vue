@@ -20,7 +20,7 @@
             @blur="updateTitle"
             data-cy="todo-title"
           />
-          <label for="inputTitle" data-cy="todo-title">
+          <label for="inputTitle">
             <img src="@/assets/icon/icon-edit.svg" alt="edit" class="pointer-cursor ms-3" />
           </label>
         </div>
@@ -135,9 +135,9 @@
     tabindex="-1"
     aria-labelledby="addModalLabel"
     aria-hidden="true"
-    data-cy="modal-add-todo"
+    data-cy="modal-add"
   >
-    <div class="modal-dialog modal-dialog-centered" data-cy="todo-modal-add">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Tambah List Item</h5>
@@ -169,12 +169,7 @@
                 aria-label="Default select example"
                 data-cy="modal-add-priority-dropdown"
               >
-                <option
-                  v-for="item in priorityOptions"
-                  :key="item"
-                  :value="item.value"
-                  data-cy="modal-add-priority-dropdown"
-                >
+                <option v-for="item in priorityOptions" :key="item" :value="item.value">
                   <span>
                     <i class="label-priority d-inline-block" :style="{ background: item.color }" />
                     {{ item.label }}
