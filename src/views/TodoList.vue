@@ -120,7 +120,7 @@
           @click="getTodoById(item)"
           data-cy="todo-item-delete-button"
           data-bs-toggle="modal"
-          data-bs-target="#deleteModal"
+          data-bs-target="#deleteTodoModal"
         >
           <img src="@/assets/icon/icon-delete.svg" class="pointer-cursor" alt="delete" />
         </div>
@@ -271,7 +271,7 @@
   <!-- Modal Delete item -->
   <div
     class="modal fade"
-    id="deleteModal"
+    id="deleteTodoModal"
     tabindex="-1"
     aria-labelledby="deleteModalLabel"
     aria-hidden="true"
