@@ -1,0 +1,25 @@
+// Variable
+$primary: #16abf8;
+
+@import "bootstrap/scss/bootstrap";
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
+.card {
+  border: none;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.label-priority {
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: red;
+
+  &::after {
+    content: ' ';
+  }
+}
