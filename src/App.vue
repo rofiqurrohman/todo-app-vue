@@ -2,7 +2,7 @@
   <div class="home">
     <nav class="bg-primary">
       <div class="container py-4">
-        <h4 class="text-white">TODO LIST APP</h4>
+        <h4 class="text-white" data-cy="header-title">TODO LIST APP</h4>
       </div>
     </nav>
     <div class="container mt-3">

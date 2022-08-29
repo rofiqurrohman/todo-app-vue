@@ -24,8 +24,12 @@
         :key="item.id"
         class="col-3"
       >
-        <div class="card mb-5" style="" data-cy="activity-item">
-          <div class="card-body pointer-cursor" @click="gotoDetail(item.id)">
+        <div class="card mb-5" style="">
+          <div
+            class="card-body pointer-cursor"
+            data-cy="activity-item"
+            @click="gotoDetail(item.id)"
+          >
             <h5 class="card-title" data-cy="activity-item-title">{{ item.title }}</h5>
           </div>
           <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
@@ -54,10 +58,15 @@
     aria-hidden="true"
     data-cy="modal-delete"
   >
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered" data-cy="todo-modal-delete">
       <div class="modal-content py-4">
         <div class="modal-body text-center">
-          <img src="@/assets/icon/icon-alert.svg" class="d-block mx-auto" alt="" />
+          <img
+            src="@/assets/icon/icon-alert.svg"
+            class="d-block mx-auto"
+            alt="icon-alert"
+            data-cy="modal-alert-icon"
+          />
           <span
             >Apakah anda yakin menghapus activity <b>"{{ stateById.title }}"</b> ?</span
           >
@@ -84,6 +93,7 @@
       </div>
     </div>
   </div>
+  <span class="visually-hidden" data-cy="modal-information">Data dihapus</span>
 </template>
 
 <script>

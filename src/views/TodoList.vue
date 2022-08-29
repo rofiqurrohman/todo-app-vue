@@ -18,8 +18,9 @@
             v-model="titleTodo"
             id="inputTitle"
             @blur="updateTitle"
+            data-cy="todo-title"
           />
-          <label for="inputTitle" data-cy="todo-title-edit-button">
+          <label for="inputTitle" data-cy="todo-title">
             <img src="@/assets/icon/icon-edit.svg" alt="edit" class="pointer-cursor ms-3" />
           </label>
         </div>
@@ -158,7 +159,6 @@
                 class="form-control"
                 id="name"
                 data-cy="modal-add-name-input"
-                required
               />
             </div>
             <div class="mb-3">
@@ -169,7 +169,12 @@
                 aria-label="Default select example"
                 data-cy="modal-add-priority-dropdown"
               >
-                <option v-for="item in priorityOptions" :key="item" :value="item.value">
+                <option
+                  v-for="item in priorityOptions"
+                  :key="item"
+                  :value="item.value"
+                  data-cy="modal-add-priority-dropdown"
+                >
                   <span>
                     <i class="label-priority d-inline-block" :style="{ background: item.color }" />
                     {{ item.label }}
@@ -307,6 +312,7 @@
       </div>
     </div>
   </div>
+  <span class="visually-hidden" data-cy="modal-information">Data dihapus</span>
 </template>
 
 <script>
